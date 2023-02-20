@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/Vignesh-GitHubreposy/Laravel9searchvue/master/public/logo.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
 <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
@@ -49,10 +49,9 @@ php artisan tinker
 
 Book::factory()->times(200)->create();
 
+Postman collection file also uploaded here 
 
-
-
-
+file name "Laravel9search01.postman_collection.json"
 
  Following are the credentials and Rest API 
 
@@ -61,7 +60,31 @@ Book::factory()->times(200)->create();
  Password: admin@123
 
  ## REST API  
+ try using this command if any doubt
+
+php artisan route:list
 
 
+ Login API:POST http://127.0.0.1:8000/api/login
+
+Register API:POST http://127.0.0.1:8000/api/register
+
+Logout API:POST http://127.0.0.1:8000/api/logout
+
+GetBooks API:GET http://127.0.0.1:8000/api/books
+
+GetBooks By Id:GET http://127.0.0.1:8000/api/books/{book}
+
+Create Books:POST http://127.0.0.1:8000/api/books/
+
+Update Books:PATCH http://127.0.0.1:8000/api/books/
+
+Delete Books:DEL http://127.0.0.1:8000/api/books/{book}
+
+# Filter API
+
+Search and Filter books: GET http://127.0.0.1:8000/api/v1/booksearch
+
+for Example: http://127.0.0.1:8000/api/v1/booksearch?quantity=5&page=2
 
 # Laravel9searchvue
