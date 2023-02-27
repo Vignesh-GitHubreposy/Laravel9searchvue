@@ -6,7 +6,6 @@ use App\Http\Requests\StoreBookRequest;
 use App\Http\Resources\BooksResource;
 use App\Models\Book;
 use App\Traits\HttpResponses;
-use Dotenv\Validator;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -15,10 +14,14 @@ class SearchBookController extends Controller
     use HttpResponses;
     public function index()
     {
-        $data = Book::query()->paginate(20);
+        $data = Book::query()->paginate(7);
         return Inertia::render('Books', [
             'data' => $data
         ]);
+    }
+    public static function show()
+    {
+        return Book::query()->paginate(10);
     }
     public function searchbooks(Request $request)
     {

@@ -7,6 +7,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,8 +20,13 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return view('Welcome', [
-        'result'=> Book::paginate(15),
+    // 
+    return Inertia::render('Welcome',[
+        'canLogin'=>Route::has('login'),
+        'canRegister'=> Route::has('register'),
+        'authorlist'=> SearchBookController::authorlist(),
+        'genre'=> SearchBookController::genre(),
+        'data'=> SearchBookController::show(),
     ]);
 });
 

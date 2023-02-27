@@ -5,6 +5,7 @@ import { Head } from '@inertiajs/vue3';
 
 
 <template>
+    <div>
     <Head title="Dashboard" />
 
     <AuthenticatedLayout>
@@ -19,10 +20,7 @@ import { Head } from '@inertiajs/vue3';
                 </div>
             </div>
         </div>
-
-    
-
-
     </AuthenticatedLayout>
+</div>
 </template>
 

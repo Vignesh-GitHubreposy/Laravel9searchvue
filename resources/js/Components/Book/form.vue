@@ -1,6 +1,3 @@
-
-88 lines (79 sloc)  5.34 KB
-
 <template>
     <div class="fixed z-10 inset-0 overflow-y-auto ease-out duration-400" v-if="isOpen">
         <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
@@ -38,11 +35,60 @@
 
                             </div>
                             <div class="mb-4">
+                                <label for="formBookGenre"
+                                       class="block text-gray-700 text-sm font-bold mb-2">Genre:</label>
+                                <input type="text"
+                                v-model="form.genre"
+                                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                       id="formBookGenre" placeholder="Enter Genre">
+                                       <div v-if="$page.props.errors.genre" class="text-red-500">{{ $page.props.errors.genre }}</div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="formBookDescription"
+                                       class="block text-gray-700 text-sm font-bold mb-2">Description:</label>
+                                <textarea
+                                v-model="form.description"
+                                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                       id="formBookDescription" >Enter Description</textarea>
+                                       <div v-if="$page.props.errors.description" class="text-red-500">{{ $page.props.errors.description }}</div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="formBookISBN"
+                                       class="block text-gray-700 text-sm font-bold mb-2">ISBN:</label>
+                                <input type="text"
+                                v-model="form.isbn"
+                                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                       id="formBookISBN" placeholder="Enter ISBN number">
+                                       <div v-if="$page.props.errors.isbn" class="text-red-500">{{ $page.props.errors.isbn }}</div>
+                            </div>
+                            <div class="mb-4">
                                 <label for="formBookImage"
                                        class="block text-gray-700 text-sm font-bold mb-2">Image:</label>
                                 <input type="text"
+                                v-model="form.image"
                                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                       id="formBookImage" placeholder="Enter Image">
+                                       id="formBookImage" placeholder="Enter Image Url">
+                                       <div v-if="$page.props.errors.image" class="text-red-500">{{ $page.props.errors.image }}</div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="formBookPublished"
+                                       class="block text-gray-700 text-sm font-bold mb-2">Published on:</label>
+                                <input type="date"
+                                v-model="form.published"
+                                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                       id="formBookPublished" >
+                                       <div v-if="$page.props.errors.published" class="text-red-500">{{ $page.props.errors.published }}</div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="formBookPublisher"
+                                       class="block text-gray-700 text-sm font-bold mb-2">Publisher:</label>
+                                <input type="text"
+                                v-model="form.publisher"
+                                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                       id="formBookPublisher" placeholder="Enter Publisher">
+                                       <div v-if="$page.props.errors.publisher" class="text-red-500">{{ $page.props.errors.publisher }}</div>
                             </div>
                         </div>
                     </div>
