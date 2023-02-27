@@ -22,7 +22,7 @@
 
         </div>
     </div>
-    <div class="flex justify-center mt-2 p-2 ">
+    <div class="flex justify-center mt-2 p-2 bg-white">
         <pagination :links="data.links"></pagination>
     </div>
     <div class="flex flex-wrap justify-center">
@@ -71,7 +71,7 @@
             </div>
         </div>
     </div>
-    <div class="flex justify-center mt-2 p-2 ">
+    <div class="flex justify-center mt-2 p-2 bg-white">
         <pagination :links="data.links"></pagination>
     </div>
 </template>

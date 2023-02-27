@@ -14,14 +14,14 @@ class SearchBookController extends Controller
     use HttpResponses;
     public function index()
     {
-        $data = Book::query()->paginate(7);
+        $data = Book::query()->paginate(125);
         return Inertia::render('Books', [
             'data' => $data
         ]);
     }
     public static function show()
     {
-        return Book::query()->paginate(10);
+        return Book::query()->paginate(125);
     }
     public function searchbooks(Request $request)
     {
