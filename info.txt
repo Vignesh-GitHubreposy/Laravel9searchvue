@@ -1,0 +1,31 @@
+Laravel Installation and Login and CRUD operation:
+
+Laravel Installation:
+composer create-project laravel/laravel example-app
+
+cd example-app
+ 
+php artisan serve
+
+edit .env file for database connection to add usernane and password
+
+For Automatic Login System:
+
+composer require laravel/breeze --dev
+
+php artisan breeze:install
+
+php artisan migrate
+
+npm install
+npm run dev
+
+CRUD Operation:
+
+php artisan make:model Modelname -mfsc
+ajax datatablewithout yajra
+https://tutorial101.blogspot.com/2023/06/laravel-10-crud-with-image-upload-using.html
+
+using yajra
+https://laravelarticle.com/laravel-ajax-datatable-crud
+https://www.nicesnippets.com/blog/laravel-9-ajax-crud-tutorial-using-datatable#google_vignette
